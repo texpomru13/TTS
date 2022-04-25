@@ -6,5 +6,5 @@
 Предназначен для очистки, нормализации и перевода текста в последовательность чисел и обратно.
 '''
 
-from text_preparation.text_normalization import normalize_text, normalize_text_len, LANGUAGES, ctc_symbol_to_id
-from text_preparation.text_and_sequences import text_to_sequence, sequence_to_text, get_symbols_length, get_ctc_symbols_length
+from TTS.tts.utils.text.phonemizers.text_preparation.text_normalization import normalize_text, normalize_text_len, LANGUAGES, ctc_symbol_to_id
+from TTS.tts.utils.text.phonemizers.text_preparation.text_and_sequences import text_to_sequence, sequence_to_text, get_symbols_length, get_ctc_symbols_length

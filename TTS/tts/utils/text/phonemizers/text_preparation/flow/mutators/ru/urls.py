@@ -3,9 +3,9 @@ from urllib.parse import urlparse
 
 from polyglot.transliteration import Transliterator
 
-from text_preparation.numbers_to_words_ru import one_number_to_words_ru
-from text_preparation.flow.mutators.base import AbstractMutator
-from text_preparation.flow.mutators.mixins import ReplaceSymbolsMixin, PauseSymbolsMixin
+from TTS.tts.utils.text.phonemizers.text_preparation.numbers_to_words_ru import one_number_to_words_ru
+from TTS.tts.utils.text.phonemizers.text_preparation.flow.mutators.base import AbstractMutator
+from TTS.tts.utils.text.phonemizers.text_preparation.flow.mutators.mixins import ReplaceSymbolsMixin, PauseSymbolsMixin
 
 
 class URLVocalizer(AbstractMutator, ReplaceSymbolsMixin, PauseSymbolsMixin):

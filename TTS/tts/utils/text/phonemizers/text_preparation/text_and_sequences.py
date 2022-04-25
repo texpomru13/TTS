@@ -6,8 +6,8 @@
 Предназначен для очистки, нормализации и перевода текста в последовательность чисел и обратно.
 '''
 
-from text_preparation.text_normalization import normalize_text, LANGUAGES, ctc_symbols, ctc_symbol_to_id, symbol_to_id, id_to_symbol, curly_braces_re
-from text_preparation import symbols
+from TTS.tts.utils.text.phonemizers.text_preparation.text_normalization import normalize_text, LANGUAGES, ctc_symbols, ctc_symbol_to_id, symbol_to_id, id_to_symbol, curly_braces_re
+from TTS.tts.utils.text.phonemizers.text_preparation import symbols
 
 
 def text_to_sequence(text, language='ru', use_text_normalizers=True, replacing_symbols=False, expand_difficult_abbreviations=True,
@@ -29,7 +29,7 @@ def text_to_sequence(text, language='ru', use_text_normalizers=True, replacing_s
     7. use_g2p_accentor - True: выполнять расстановку ударений модулем на правилах G2P.Accentor (иногда работает очень медленно)
     8. use_g2p - True: выполнять перевод слов в последовательности фонем с помощью G2P
     9. add_point_at_the_end - True: добавлять точку в конец текста, если там нет никаких поддерживаемых знаков препинания (пробелы и eos игнорируются)
-    10. add_eos - True: добавлять символ конца последовательности в конец текста, если он поддерживается (используется text_preparation.symbols.eos)
+    10. add_eos - True: добавлять символ конца последовательности в конец текста, если он поддерживается (используется TTS.tts.utils.text.phonemizers.text_preparation.symbols.eos)
     11. возвращает список из целых чисел, соответствующих символам в тексте '''
 
     if language not in LANGUAGES:

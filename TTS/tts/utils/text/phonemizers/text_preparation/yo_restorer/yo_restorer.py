@@ -14,7 +14,7 @@ import re
 try:
     from dictionary import YoDictionary
 except ModuleNotFoundError:
-    from text_preparation.yo_restorer.dictionary import YoDictionary
+    from TTS.tts.utils.text.phonemizers.text_preparation.yo_restorer.dictionary import YoDictionary
 
 
 class YoRestorer:

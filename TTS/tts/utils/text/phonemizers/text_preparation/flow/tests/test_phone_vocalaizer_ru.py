@@ -1,7 +1,7 @@
 import unittest
 
-from text_preparation.flow.mutators.ru import PhoneVocalizer
-from text_preparation.flow.tests.fixtures import phone_data
+from TTS.tts.utils.text.phonemizers.text_preparation.flow.mutators.ru import PhoneVocalizer
+from TTS.tts.utils.text.phonemizers.text_preparation.flow.tests.fixtures import phone_data
 
 
 class PhoneVocalizerTest(unittest.TestCase):

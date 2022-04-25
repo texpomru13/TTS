@@ -52,7 +52,7 @@ mapping_symbols_ru = {
     'я': 'я+',
     ' ': '. - ',
 
-    # Список экранированных знаков препинания взят из text_preparation.expanding_abbreviations_ru
+    # Список экранированных знаков препинания взят из TTS.tts.utils.text.phonemizers.text_preparation.expanding_abbreviations_ru
     ',': '\\,',
     '.': '\\.',
     ':': '\\:',

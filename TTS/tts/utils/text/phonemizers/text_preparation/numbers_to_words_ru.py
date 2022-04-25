@@ -18,9 +18,9 @@ from typing import List, Union, Tuple
 from num2words import num2words
 
 try:
-    from text_preparation.framing_numbers.framing_numbers import NumberWithSpacesCase
-    from text_preparation.numerals_declination import NumeralsDeclination_ru
-    from text_preparation.numerals_matching import NumeralsMatching_ru
+    from TTS.tts.utils.text.phonemizers.text_preparation.framing_numbers.framing_numbers import NumberWithSpacesCase
+    from TTS.tts.utils.text.phonemizers.text_preparation.numerals_declination import NumeralsDeclination_ru
+    from TTS.tts.utils.text.phonemizers.text_preparation.numerals_matching import NumeralsMatching_ru
 except ModuleNotFoundError:
     from framing_numbers.framing_numbers import NumberWithSpacesCase
     from numerals_declination import NumeralsDeclination_ru

@@ -29,15 +29,15 @@ from russian_g2p.Grapheme2Phoneme import Grapheme2Phoneme
 
 from stress_dictionary import StressDictionary
 
-from text_preparation import symbols
-from text_preparation.numbers_to_words_en import numbers_to_words_en
-from text_preparation.numbers_to_words_ru import numbers_to_words_ru
-from text_preparation.expanding_abbreviations_en import expand_abbreviations_en
-from text_preparation.expanding_abbreviations_ru import ExpandingAbbreviations_ru
-from text_preparation.words_to_alphabetical_transcription_ru import WordsToAlphabeticalTranscription_ru
-from text_preparation.mapping_symbols_for_arbitrary_sequences import mapping_symbols_for_arbitrary_sequence
-from text_preparation.yo_restorer import YoRestorer
-from text_preparation.flow import executor as flow_executor
+from TTS.tts.utils.text.phonemizers.text_preparation import symbols
+from TTS.tts.utils.text.phonemizers.text_preparation.numbers_to_words_en import numbers_to_words_en
+from TTS.tts.utils.text.phonemizers.text_preparation.numbers_to_words_ru import numbers_to_words_ru
+from TTS.tts.utils.text.phonemizers.text_preparation.expanding_abbreviations_en import expand_abbreviations_en
+from TTS.tts.utils.text.phonemizers.text_preparation.expanding_abbreviations_ru import ExpandingAbbreviations_ru
+from TTS.tts.utils.text.phonemizers.text_preparation.words_to_alphabetical_transcription_ru import WordsToAlphabeticalTranscription_ru
+from TTS.tts.utils.text.phonemizers.text_preparation.mapping_symbols_for_arbitrary_sequences import mapping_symbols_for_arbitrary_sequence
+from TTS.tts.utils.text.phonemizers.text_preparation.yo_restorer import YoRestorer
+from TTS.tts.utils.text.phonemizers.text_preparation.flow import executor as flow_executor
 
 # Отключение warning уведомлений TensorFlow (предупреждения об устаревших методах и отладочная информация)
 # Источник: https://github.com/tensorflow/tensorflow/issues/27023#issuecomment-589673539
@@ -449,7 +449,7 @@ def adding_point_at_the_end_of_text(text):
     ''' Добавление точки в конец текста, если там нет никаких поддерживаемых знаков препинания. Пробелы и символ eos в конце текста игнорируются.
     Уменьшает вероятность срыва синтеза и в некоторых случаях интонация становится более правильной.
 
-    Список поддерживаемых знаков препинания находится в text_preparation.symbols.punctuations, символ eos в text_preparation.symbols.eos.
+    Список поддерживаемых знаков препинания находится в TTS.tts.utils.text.phonemizers.text_preparation.symbols.punctuations, символ eos в TTS.tts.utils.text.phonemizers.text_preparation.symbols.eos.
 
     1. text - строка с текстом
     2. возвращает обработанный текст '''
@@ -474,7 +474,7 @@ def adding_eos_at_the_end_of_text(text):
     и немного упрощает нейронке выучивать окончания фраз, но на практике это не доказано (у кого-то есть положительные изменения от использования eos,
     у кого-то их нет).
 
-    Символ eos находится в text_preparation.symbols.eos.
+    Символ eos находится в TTS.tts.utils.text.phonemizers.text_preparation.symbols.eos.
 
     1. text - строка с текстом
     2. возвращает обработанный текст '''

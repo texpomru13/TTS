@@ -1,7 +1,7 @@
 import unittest
 
-from text_preparation.flow.mutators.ru import URLVocalizer
-from text_preparation.flow.tests.fixtures import url_data
+from TTS.tts.utils.text.phonemizers.text_preparation.flow.mutators.ru import URLVocalizer
+from TTS.tts.utils.text.phonemizers.text_preparation.flow.tests.fixtures import url_data
 
 
 class URLVocalizerTest(unittest.TestCase):

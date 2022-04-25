@@ -11,8 +11,8 @@ import re
 import time
 
 try:
-    from text_preparation.framing_numbers.framing_numbers import NumberWithSpacesCase
-    from text_preparation.numerals_declination import NumeralsDeclination_ru
+    from TTS.tts.utils.text.phonemizers.text_preparation.framing_numbers.framing_numbers import NumberWithSpacesCase
+    from TTS.tts.utils.text.phonemizers.text_preparation.numerals_declination import NumeralsDeclination_ru
 except ModuleNotFoundError:
     from framing_numbers.framing_numbers import NumberWithSpacesCase
     from numerals_declination import NumeralsDeclination_ru

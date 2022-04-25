@@ -1,5 +1,5 @@
 from typing import Type
-from text_preparation.flow.mutators.base import AbstractMutator
+from TTS.tts.utils.text.phonemizers.text_preparation.flow.mutators.base import AbstractMutator
 
 
 class FlowExecutor(object):

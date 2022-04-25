@@ -2,7 +2,7 @@ import sys
 import unittest
 
 try:
-    from text_preparation.numerals_matching import NumeralsMatching_ru
+    from TTS.tts.utils.text.phonemizers.text_preparation.numerals_matching import NumeralsMatching_ru
 except ModuleNotFoundError:
     from numerals_matching import NumeralsMatching_ru
 

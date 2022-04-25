@@ -1,6 +1,6 @@
 import time
-from text_preparation.framing_numbers.tests.fixtures import test_cases, test_texts
-from text_preparation.framing_numbers.framing_numbers import NumberWithSpacesCase
+from TTS.tts.utils.text.phonemizers.text_preparation.framing_numbers.tests.fixtures import test_cases, test_texts
+from TTS.tts.utils.text.phonemizers.text_preparation.framing_numbers.framing_numbers import NumberWithSpacesCase
 
 
 def benchmark():

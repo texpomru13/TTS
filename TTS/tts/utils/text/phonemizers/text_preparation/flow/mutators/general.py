@@ -1,6 +1,6 @@
 from urllib.parse import unquote
 
-from text_preparation.flow.mutators.base import AbstractMutator
+from TTS.tts.utils.text.phonemizers.text_preparation.flow.mutators.base import AbstractMutator
 
 
 class GeneralTextPreprocessing(AbstractMutator):

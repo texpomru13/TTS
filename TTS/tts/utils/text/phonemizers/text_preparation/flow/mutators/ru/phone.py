@@ -1,8 +1,8 @@
 import re
 import phonenumbers
-from text_preparation.numbers_to_words_ru import one_number_to_words_ru
-from text_preparation.flow.mutators.base import AbstractMutator
-from text_preparation.flow.mutators.mixins import ReplaceSymbolsMixin
+from TTS.tts.utils.text.phonemizers.text_preparation.numbers_to_words_ru import one_number_to_words_ru
+from TTS.tts.utils.text.phonemizers.text_preparation.flow.mutators.base import AbstractMutator
+from TTS.tts.utils.text.phonemizers.text_preparation.flow.mutators.mixins import ReplaceSymbolsMixin
 
 INTERNATIONAL_PHONE_FIRST_SYMBOL = '+'
 INTERNATIONAL_PHONE_MIN_LENGTH = 11

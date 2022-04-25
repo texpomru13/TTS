@@ -8,7 +8,7 @@
 
 import re
 
-from text_preparation import normalizers, symbols
+from TTS.tts.utils.text.phonemizers.text_preparation import normalizers, symbols
 
 
 LANGUAGES = ['ru', 'en', 'xx']
@@ -58,7 +58,7 @@ def normalize_text(text, language='ru', replacing_symbols=False, expand_difficul
     6. use_g2p_accentor - True: выполнять расстановку ударений модулем на правилах G2P.Accentor (иногда работает очень медленно)
     7. use_g2p - True: выполнять перевод слов в последовательности фонем с помощью G2P
     8. add_point_at_the_end - True: добавлять точку в конец текста, если там нет никаких поддерживаемых знаков препинания (пробелы и eos игнорируются)
-    9. add_eos - True: добавлять символ конца последовательности в конец текста, если он поддерживается (используется text_preparation.symbols.eos)
+    9. add_eos - True: добавлять символ конца последовательности в конец текста, если он поддерживается (используется TTS.tts.utils.text.phonemizers.text_preparation.symbols.eos)
     10. возвращает обработанный текст '''
 
     if language not in LANGUAGES:
