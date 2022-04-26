@@ -37,7 +37,7 @@ from TTS.tts.utils.text.phonemizers.text_preparation.expanding_abbreviations_ru 
 from TTS.tts.utils.text.phonemizers.text_preparation.words_to_alphabetical_transcription_ru import WordsToAlphabeticalTranscription_ru
 from TTS.tts.utils.text.phonemizers.text_preparation.mapping_symbols_for_arbitrary_sequences import mapping_symbols_for_arbitrary_sequence
 from TTS.tts.utils.text.phonemizers.text_preparation.yo_restorer import YoRestorer
-from TTS.tts.utils.text.phonemizers.text_preparation.flow import executor as flow_executor
+# from TTS.tts.utils.text.phonemizers.text_preparation.flow import executor as flow_executor
 
 # Отключение warning уведомлений TensorFlow (предупреждения об устаревших методах и отладочная информация)
 # Источник: https://github.com/tensorflow/tensorflow/issues/27023#issuecomment-589673539
@@ -48,7 +48,7 @@ warnings.filterwarnings('ignore', category=UserWarning)
 
 
 # Перед использованием нужно выполнить: polyglot download transliteration2.ru
-transliterator_en_to_ru = polyglot.transliteration.Transliterator(source_lang='en', target_lang='ru')
+# transliterator_en_to_ru = polyglot.transliteration.Transliterator(source_lang='en', target_lang='ru')
 
 expanding_abbreviations_ru = ExpandingAbbreviations_ru()
 words_to_alphabetical_transcription_ru = WordsToAlphabeticalTranscription_ru()
@@ -171,7 +171,7 @@ def russian_normalizer(text, replacing_symbols=False, expand_difficult_abbreviat
 
     # Базовая очистка текста
     text = basic_cleaning(text)
-    text = flow_executor.run(text)
+    # text = flow_executor.run(text)
 
     # Замена символов в тексте на специальные последовательности
     if replacing_symbols:
@@ -190,7 +190,7 @@ def russian_normalizer(text, replacing_symbols=False, expand_difficult_abbreviat
     words = tokenize(text)
 
     # Транслитерация английских слов в русский алфавит
-    words = transliterator_en_to_ru_wrapper(words)
+    # words = transliterator_en_to_ru_wrapper(words)
 
     # В датасете M-AILABS некоторые буквы в русских словах являются буквами из английского алфавита, которые так же выглядят. Исправление этого
     for i, word in enumerate(words):
