@@ -7,6 +7,8 @@ from typing import List
 
 from tqdm import tqdm
 
+import pandas as pd
+
 ########################
 # DATASETS
 ########################
@@ -107,6 +109,23 @@ def mailabs(root_path, meta_files=None, ignored_speakers=None):
                     print("> File %s does not exist!" % (wav_file))
     return items
 
+def twin(root_path, meta_file, **kwargs):  # pylint: disable=unused-argument
+    """Normalizes the LJSpeech meta data file to TTS format
+    https://keithito.com/LJ-Speech-Dataset/"""
+    txt_file = os.path.join(root_path, meta_file)
+    items = []
+    speaker_name = "ljspeech"
+    df = pd.read_csv(txt_file)
+    for i in df.values:
+        wav_file = os.path.join(root_path, "wavs", i[4] + ".wav")
+        items.append({"text": i[1], "audio_file": wav_file, "speaker_name": i[3]})
+    # with open(txt_file, "r", encoding="utf-8") as ttf:
+    #     for line in ttf:
+    #         cols = line.split("|")
+    #         wav_file = os.path.join(root_path, "wavs", cols[0] + ".wav")
+    #         text = cols[2]
+    #         items.append({"text": text, "audio_file": wav_file, "speaker_name": speaker_name})
+    return items
 
 def ljspeech(root_path, meta_file, **kwargs):  # pylint: disable=unused-argument
     """Normalizes the LJSpeech meta data file to TTS format
